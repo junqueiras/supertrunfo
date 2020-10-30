@@ -3,6 +3,7 @@ package com.wcc.supertrunfo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.wcc.supertrunfo.entities.Vehicle
 import kotlinx.android.synthetic.main.activity_cards.*
 
 class CardsActivity : AppCompatActivity() {
@@ -12,6 +13,16 @@ class CardsActivity : AppCompatActivity() {
 
         val playerOneName = intent.getStringExtra("player_one") ?: "Player One"
         val playerTwoName = intent.getStringExtra("player_two") ?: "Player Two"
+
+        val newVehicleOne = Vehicle(
+            100,
+            120,
+            5,
+            120,
+            2,
+            "sedã",
+            5,
+            "car")
 
         val vehiculeOne = mapOf(
             "maxAcceleration" to "100",
@@ -24,15 +35,6 @@ class CardsActivity : AppCompatActivity() {
             "type" to "car"
         )
 
-        val newVehicleOne = Vehicle(
-            100,
-            120,
-            5,
-            120,
-            2,
-            "sedã",
-            5,
-            "car")
 
         val vehiculeTwo = mapOf(
             "maxAcceleration" to "50",
